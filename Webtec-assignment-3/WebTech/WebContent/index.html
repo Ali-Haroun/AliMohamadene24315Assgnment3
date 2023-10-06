@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>HOME</title>
+    <link rel="stylesheet" href="style/indexstyle.css" />
+  </head>
+  <body>
+ 
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+      </div>
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+      </div>
+    </nav>
+    <center>
+      <div class="content">
+        <h1 id="pageTitle">Student Admission</h1>
+        <p id="paragraphMessage">Thanks For Choosing Our School</p>
+        <form action="/studentAdmission" method="POST" enctype="multipart/form-data">
+            <p id="uploadTitle">Select your Picture or File:</p>
+            <input type="file" name="fileToUpload">
+            <p><input type="submit" value="Upload"></p>
+        </form>
+        <form action="sendConfirmationEmail" method="POST">
+            <input type="text" name="recipientEmail" placeholder="Recipient's Email" required>
+            <input type="text" name="confirmationCode" placeholder="Confirmation Code" required>
+            <input type="submit" value="Send Confirmation Email" id="button">
+        </form>
+        <p id="languages">Please select your preferred language:</p>
+        <br>
+        <select id="languageSelector" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Keniarwanda</option>
+        </select>
+    </div>
+    </center>
+    <script>
+      function changeLanguage() {
+          var selectedLanguage = document.getElementById("languageSelector").value;
+          var languageData = {
+              en: {
+                  pageTitle: "Student Admission Page",
+                  paragraphMessage: "Hope you enjoy the tour!",
+                  uploadTitle: "Select your Picture or File:",
+                  languages: "Please select your preferred language:",
+                  logi: "Login", 
+                  reg:"Register",
+                  button:"Send Confirmation Email"
+              },
+              fr: {
+                  pageTitle: "Page d'Admission des Étudiants",
+                  paragraphMessage: "J'espère que vous apprécierez la visite !",
+                  uploadTitle: "Sélectionnez votre image ou fichier :",
+                  languages: "Veuillez sélectionner votre langue préférée :",
+                  logi: "Connexion",
+                  reg:"S'inscrire",
+                  button:"Envoyer un courriel de confirmation"
+              },
+              es: {
+                  pageTitle: "Página de Admisión de Estudiantes",
+                  paragraphMessage: "¡Espero que disfrutes del recorrido!",
+                  uploadTitle: "Selecciona tu Foto o Archivo:",
+                  languages: "Por favor, selecciona tu idioma preferido:",
+                  logi: "Iniciar sesión",
+                  reg:"Registrarse",
+                  button:"Enviar correo de confirmación"
+              }
+          };
+  
+
+          document.getElementById("pageTitle").textContent = languageData[selectedLanguage].pageTitle;
+          document.getElementById("paragraphMessage").textContent = languageData[selectedLanguage].paragraphMessage;
+          document.getElementById("uploadTitle").textContent = languageData[selectedLanguage].uploadTitle;
+          document.getElementById("languages").textContent = languageData[selectedLanguage].languages;
+          document.getElementById("button").value = languageData[selectedLanguage].button;
+          document.getElementById("logi").textContent = languageData[selectedLanguage].logi; 
+          document.getElementById("reg").textContent = languageData[selectedLanguage].reg;
+      }
+  </script>
+
+    <script src="style/indexscript.js"></script>
+  </body>
+</html>

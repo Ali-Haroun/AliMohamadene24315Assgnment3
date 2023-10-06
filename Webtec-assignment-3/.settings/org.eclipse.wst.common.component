@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+                
+    
+    
+    <wb-module deploy-name="Webtec_assignment_3">
+                                
+        
+        
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+                                
+        
+        
+        <property name="java-output-path" value="/Webtec_assignment_3/WebTech-24047/build/classes"/>
+        <property name="context-root" value="Webtec_assignment_3"/>
+                            
+    
+    
+    </wb-module>
+            
+
+
+</project-modules>

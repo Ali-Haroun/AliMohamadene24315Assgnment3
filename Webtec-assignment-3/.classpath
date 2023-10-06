@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="WebTech-24047/src"/>
+	<classpathentry kind="lib" path="WebTech-24047/WebContent/WEB-INF/lib/activation.jar"/>
+	<classpathentry kind="lib" path="WebTech-24047/WebContent/WEB-INF/lib/javax.mail.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="output" path="WebTech-24047/build/classes"/>
+</classpath>

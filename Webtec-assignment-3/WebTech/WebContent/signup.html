@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Signup Form</header>
+    <form action="signup" method="POST">
+      <div class="field email">
+        <div class="input-area">
+          <input type="text" placeholder="Email Address" name="Email">
+          <i class="icon fas fa-envelope"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Email should not be empty</div>
+      </div>
+      <div class="field password">
+        <div class="input-area">
+          <input type="password" placeholder="Password" name="password">
+          <i class="icon fas fa-lock"></i>
+          <i class="error error-icon fas fa-exclamation-circle"></i>
+        </div>
+        <div class="error error-txt">Password should  not be emptyk</div>
+      </div>
+      <input type="submit" value="Signup">
+    </form>
+    <div class="sign-txt">I am a member! <a href="login.html">Login now</a></div>
+  </div>
+
+  <script src="style/script.js"></script>
+
+</body>
+</html>
